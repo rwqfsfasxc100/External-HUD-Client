@@ -1,2 +1,2 @@
 # ExternalHUD Client
-Client mod for the External HUD program
+Client mod used to connect to the [External HUD Projector](https://github.com/rwqfsfasxc100/External-HUD-Projector) program.
