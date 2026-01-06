@@ -4,5 +4,5 @@
 
 [node name="Hud" instance=ExtResource( 1 )]
 
-[node name="SYSTEM_EXTERNALHUD_HUD" parent="Huds" index="11" instance_placeholder="res://ExternalHUD/hud/Display-External.tscn"]
+[node name="SYSTEM_EXTERNALHUD_HUD" parent="Huds" index="11" instance_placeholder="res://External HUD Client/hud/Display-External.tscn"]
 visible = false

@@ -2,11 +2,11 @@ extends Node
 
 # Set mod priority if you want it to load before/after other mods
 # Mods are loaded from lowest to highest priority, default is 0
-const MOD_PRIORITY = -1
+const MOD_PRIORITY = -999
 # Name of the mod, used for writing to the logs
 const MOD_NAME = "External HUD"
-const MOD_VERSION_MAJOR = 1
-const MOD_VERSION_MINOR = 0
+const MOD_VERSION_MAJOR = 0
+const MOD_VERSION_MINOR = 1
 const MOD_VERSION_BUGFIX = 0
 const MOD_VERSION_METADATA = ""
 
@@ -30,7 +30,7 @@ func _init(modLoader = ModLoader):
 #	installScriptExtension("ships/ship-ctrl.gd")
 #	installScriptExtension("hud/SensorDisplay.gd")
 	# Loads translation file. For this example, the english translation file is used. 
-#	updateTL("i18n/en.txt", "|")
+	updateTL("i18n/en.txt", "|")
 	
 	replaceScene("hud/Hud.tscn")
 	
@@ -41,7 +41,7 @@ func _init(modLoader = ModLoader):
 func _ready():
 	l("Readying")
 	var network = Node.new()
-	network.set_script(load("res://ExternalHUD/networking/Network.gd"))
+	network.set_script(load("res://External HUD Client/networking/Network.gd"))
 	network.name = "ExternalHUD_Network"
 	get_tree().get_root().call_deferred("add_child",network)
 	l("Ready")

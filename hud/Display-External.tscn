@@ -24,7 +24,7 @@
 [ext_resource path="res://hud/components/Distortion.tscn" type="PackedScene" id=34]
 [ext_resource path="res://hud/AutopilotKeyText.tscn" type="PackedScene" id=35]
 [ext_resource path="res://hud/Booter.tscn" type="PackedScene" id=36]
-[ext_resource path="res://ExternalHUD/hud/SensorDisplay.gd" type="Script" id=37]
+[ext_resource path="res://External HUD Client/hud/SensorDisplay.gd" type="Script" id=37]
 
 [node name="Display" type="Container"]
 anchor_right = 1.0

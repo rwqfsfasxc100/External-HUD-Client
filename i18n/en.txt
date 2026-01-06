@@ -1,0 +1,9 @@
+locale|en
+
+SYSTEM_EXTERNALHUD_HUD|[WIP] External HUD
+
+SYSTEM_EXTERNALHUD_HUD_DESC|Used in tandem with the External HUD Projector program to display sensor information.
+
+SYSTEM_EXTERNALHUD_HUD_MANUAL|Requires External HUD Projector program running to connect.\nDisplays various information through that program.\n\n[WIP] Not all sensors are setup to transmit data, and some HUD elements still exist.
+
+SYSTEM_EXTERNALHUD_HUD_SPECS|Displays sensors through external program.
