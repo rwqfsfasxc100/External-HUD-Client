@@ -55,7 +55,7 @@ func update_text_sensor(sensor,value):
 
 func add_visual_sensor(sensor):
 	if connected:
-		rpc("update_sensor",sensor,"visual",PoolByteArray([]))
+		rpc("update_sensor",sensor,"visual",PoolByteArray())
 
 func update_visual_sensor(sensor,value):
 	if connected:
