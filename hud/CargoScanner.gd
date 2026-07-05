@@ -2,8 +2,9 @@ extends "res://hud/CargoScanner.gd"
 
 var sensor_id = "visual.cargo_bay_scanner"
 
+var pointers = ModLoader._savedObjects[0]
+
 export var can_scan = true
-const FolderAccess = preload("res://HevLib/pointers/FolderAccess.gd")
 
 var dir = Directory.new()
 var scannerdir = "user://cache/.ExternalHUD_Cache/visual_sensors/"
@@ -14,7 +15,7 @@ func _ready():
 			sensor_id = "visual.remote_scanner"
 			sensor_num = 1
 		scannerdir = scannerdir + sensor_id + "/"
-		FolderAccess.__recursive_delete(scannerdir)
+		pointers.FolderAccess.__recursive_delete(scannerdir)
 		dir.make_dir_recursive(scannerdir)
 		
 		
@@ -56,4 +57,4 @@ func _physics_process(delta):
 
 func exiter():
 	can_scan = false
-	FolderAccess.__recursive_delete(scannerdir)
+	pointers.FolderAccess.__recursive_delete(scannerdir)
