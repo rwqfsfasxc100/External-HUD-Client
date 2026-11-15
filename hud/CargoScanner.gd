@@ -44,7 +44,7 @@ onready var Network = get_tree().get_root().get_node_or_null("ExternalHUD_Networ
 var exhud_cargoscanner_uinit : bool = false
 func _ready():
 	if exhud_cargoscanner_uinit:
-		OS.kill(OS.get_process_id())
+		ModLoader._savedObjects[0].main_modmain.log_double_load_error(get_script().resource_path)
 	exhud_cargoscanner_uinit = true
 	if can_scan:
 		if remoteMode:
