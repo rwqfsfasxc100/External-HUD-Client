@@ -39,7 +39,7 @@ var scannerdir = "user://cache/.ExternalHUD_Cache/text_sensors/"
 var exhud_hudsensordir_uinit : bool = false
 func _ready():
 	if exhud_hudsensordir_uinit:
-		OS.kill(OS.get_process_id())
+		ModLoader._savedObjects[0].main_modmain.log_double_load_error(get_script().resource_path)
 	exhud_hudsensordir_uinit = true
 	dir.make_dir_recursive("user://cache/.ExternalHUD_Cache/text_sensors/")
 	connect("tree_exiting",self,"exiter")
