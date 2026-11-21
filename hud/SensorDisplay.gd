@@ -42,7 +42,7 @@ export var can_scan = true
 var exhud_sensordisplay_uinit : bool = false
 func _ready():
 	if exhud_sensordisplay_uinit:
-		ModLoader._savedObjects[0].main_modmain.log_double_load_error(get_script().resource_path)
+		ModLoader._savedObjects[0].log_double_load_error(get_script().resource_path)
 	exhud_sensordisplay_uinit = true
 	if can_scan:
 		connect("tree_exiting",self,"exiter")

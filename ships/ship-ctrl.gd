@@ -90,7 +90,7 @@ var rendered = false
 var exhud_shipcontroller_uinit : bool = false
 func _ready():
 	if exhud_shipcontroller_uinit:
-		ModLoader._savedObjects[0].main_modmain.log_double_load_error(get_script().resource_path)
+		ModLoader._savedObjects[0].log_double_load_error(get_script().resource_path)
 	exhud_shipcontroller_uinit = true
 	can = isPlayerControlled()
 	dirv3.make_dir_recursive(scannerdir)
